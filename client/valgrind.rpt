@@ -1,0 +1,61 @@
+==6492== Memcheck, a memory error detector
+==6492== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==6492== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==6492== Command: bin/StompWCIClient
+==6492== Parent PID: 438
+==6492== 
+==6492== 
+==6492== Process terminating with default action of signal 6 (SIGABRT)
+==6492==    at 0x4B49A7C: __pthread_kill_implementation (pthread_kill.c:44)
+==6492==    by 0x4B49A7C: __pthread_kill_internal (pthread_kill.c:78)
+==6492==    by 0x4B49A7C: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==6492==    by 0x4AF5475: raise (raise.c:26)
+==6492==    by 0x4ADB7F2: abort (abort.c:79)
+==6492==    by 0x490BBBD: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==6492==    by 0x491724B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==6492==    by 0x49172B6: std::terminate() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==6492==    by 0x4917517: __cxa_throw (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==6492==    by 0x13C4D8: bool nlohmann::json_abi_v3_11_2::detail::json_sax_dom_parser<nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void> >::parse_error<nlohmann::json_abi_v3_11_2::detail::parse_error>(unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, nlohmann::json_abi_v3_11_2::detail::parse_error const&) (json.hpp:6863)
+==6492==    by 0x13F2A2: bool nlohmann::json_abi_v3_11_2::detail::parser<nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void>, nlohmann::json_abi_v3_11_2::detail::input_stream_adapter>::sax_parse_internal<nlohmann::json_abi_v3_11_2::detail::json_sax_dom_parser<nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void> > >(nlohmann::json_abi_v3_11_2::detail::json_sax_dom_parser<nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void> >*) (json.hpp:12456)
+==6492==    by 0x139018: nlohmann::json_abi_v3_11_2::detail::parser<nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void>, nlohmann::json_abi_v3_11_2::detail::input_stream_adapter>::parse(bool, nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void>&) (json.hpp:12228)
+==6492==    by 0x137292: nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void> nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void>::parse<std::basic_ifstream<char, std::char_traits<char> >&>(std::basic_ifstream<char, std::char_traits<char> >&, std::function<bool (int, nlohmann::json_abi_v3_11_2::detail::parse_event_t, nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void>&)>, bool, bool) (json.hpp:23236)
+==6492==    by 0x1337C3: parseEventsFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (event.cpp:71)
+==6492== 
+==6492== HEAP SUMMARY:
+==6492==     in use at exit: 77,525 bytes in 24 blocks
+==6492==   total heap usage: 73 allocs, 49 frees, 84,241 bytes allocated
+==6492== 
+==6492== 168 bytes in 1 blocks are possibly lost in loss record 15 of 23
+==6492==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6492==    by 0x49160B3: __cxa_allocate_exception (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==6492==    by 0x13C4AA: bool nlohmann::json_abi_v3_11_2::detail::json_sax_dom_parser<nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void> >::parse_error<nlohmann::json_abi_v3_11_2::detail::parse_error>(unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, nlohmann::json_abi_v3_11_2::detail::parse_error const&) (json.hpp:6863)
+==6492==    by 0x13F2A2: bool nlohmann::json_abi_v3_11_2::detail::parser<nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void>, nlohmann::json_abi_v3_11_2::detail::input_stream_adapter>::sax_parse_internal<nlohmann::json_abi_v3_11_2::detail::json_sax_dom_parser<nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void> > >(nlohmann::json_abi_v3_11_2::detail::json_sax_dom_parser<nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void> >*) (json.hpp:12456)
+==6492==    by 0x139018: nlohmann::json_abi_v3_11_2::detail::parser<nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void>, nlohmann::json_abi_v3_11_2::detail::input_stream_adapter>::parse(bool, nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void>&) (json.hpp:12228)
+==6492==    by 0x137292: nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void> nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void>::parse<std::basic_ifstream<char, std::char_traits<char> >&>(std::basic_ifstream<char, std::char_traits<char> >&, std::function<bool (int, nlohmann::json_abi_v3_11_2::detail::parse_event_t, nlohmann::json_abi_v3_11_2::basic_json<std::map, std::vector, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, long, unsigned long, double, std::allocator, nlohmann::json_abi_v3_11_2::adl_serializer, std::vector<unsigned char, std::allocator<unsigned char> >, void>&)>, bool, bool) (json.hpp:23236)
+==6492==    by 0x1337C3: parseEventsFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (event.cpp:71)
+==6492==    by 0x129325: main (StompClient.cpp:216)
+==6492== 
+==6492== 304 bytes in 1 blocks are possibly lost in loss record 19 of 23
+==6492==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6492==    by 0x40147D9: calloc (rtld-malloc.h:44)
+==6492==    by 0x40147D9: allocate_dtv (dl-tls.c:375)
+==6492==    by 0x40147D9: _dl_allocate_tls (dl-tls.c:634)
+==6492==    by 0x4B48834: allocate_stack (allocatestack.c:430)
+==6492==    by 0x4B48834: pthread_create@@GLIBC_2.34 (pthread_create.c:647)
+==6492==    by 0x4945388: std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)()) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==6492==    by 0x12BF71: std::thread::thread<void (&)(ConnectionHandler*, std::queue<StompProtocol::Frame, std::deque<StompProtocol::Frame, std::allocator<StompProtocol::Frame> > >&, std::mutex&, summarize&, int&), ConnectionHandler*&, std::reference_wrapper<std::queue<StompProtocol::Frame, std::deque<StompProtocol::Frame, std::allocator<StompProtocol::Frame> > > >, std::reference_wrapper<std::mutex>, std::reference_wrapper<summarize>, std::reference_wrapper<int>, void>(void (&)(ConnectionHandler*, std::queue<StompProtocol::Frame, std::deque<StompProtocol::Frame, std::allocator<StompProtocol::Frame> > >&, std::mutex&, summarize&, int&), ConnectionHandler*&, std::reference_wrapper<std::queue<StompProtocol::Frame, std::deque<StompProtocol::Frame, std::allocator<StompProtocol::Frame> > > >&&, std::reference_wrapper<std::mutex>&&, std::reference_wrapper<summarize>&&, std::reference_wrapper<int>&&) (std_thread.h:143)
+==6492==    by 0x1289E1: main (StompClient.cpp:136)
+==6492== 
+==6492== LEAK SUMMARY:
+==6492==    definitely lost: 0 bytes in 0 blocks
+==6492==    indirectly lost: 0 bytes in 0 blocks
+==6492==      possibly lost: 472 bytes in 2 blocks
+==6492==    still reachable: 77,053 bytes in 22 blocks
+==6492==                       of which reachable via heuristic:
+==6492==                         stdstring          : 182 bytes in 1 blocks
+==6492==         suppressed: 0 bytes in 0 blocks
+==6492== Reachable blocks (those to which a pointer was found) are not shown.
+==6492== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==6492== 
+==6492== For lists of detected and suppressed errors, rerun with: -s
+==6492== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)

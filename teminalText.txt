@@ -1,0 +1,28 @@
+client/bin/StompWCIClient
+
+
+login 127.0.0.1:7777 y1on yon
+login 127.0.0.1:7777 y2on y6on
+login 127.0.0.1:7777 y3on yo45n
+login 127.0.0.1:7777 y4on y4o4n
+login 127.0.0.1:7777 y5on yon
+
+
+
+join /germany_japan
+
+report events1_partial.json
+
+report events1.json
+
+exit /germany_japan
+
+summary germany_japan y1on update4.text
+summary germany_japan y2on update4.text
+summary germany_japan y3on update.text
+summary germany_japan y4on update.text
+summary germany_japan y5on upda4te.text
+
+valgrind --leak-check=full --log-file=valgrind.rpt client/bin/StompWCIClient
+
+mvn exec:java -Dexec.mainClass="bgu.spl.net.impl.stomp.StompServer" -Dexec.args="7777 reactor"
